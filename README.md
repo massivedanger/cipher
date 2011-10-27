@@ -1,6 +1,50 @@
 # cipher
 
-TODO
+cipher lets you generate license-key-type-string-things for your consumption and pleasure.
+
+## Usage
+
+### Installation
+First, add to your Gemfile
+
+	gem 'cipher'
+	
+or do `gem install cipher`
+
+### Examples
+Now, just initialize a Cipher object:
+
+	@cipher = Cipher.new
+	
+This will give you a generic setup of a 16-length, alphanumeric key seperated every 4 characters by a hyphen.
+
+#### Generation
+Now, to generate a key, just pass it a unique string like so:
+
+	@cipher.generate({ unique: 'Test Example' })
+	
+That will return a string like **82E3-1E9D-3B60-38BD**.
+	
+Let's say you don't really like that format, though. You can customize a lot of stuff. Like, let's change EVERYTHANG.
+
+	@cipher = Cipher.new({
+      key_length: 32,
+      section_length: 8,
+      seperator: '+',
+      hash: 'md5'
+    })
+    
+Now, if we call `@cipher.generate`, it'll return **82E38775+1E9D362B+3B600A71+38BDC7B9**.
+
+#### Validation
+Now, let's go back to the default config set by just calling `@cipher = Cipher.new`.
+
+To validate a key, all you need to do is pass the unique and the key:
+	
+	product_key = @cipher.generate({ unique: 'Evan Walsh' })
+	@cipher.validate({ unique: 'Evan Walsh', key: product_key })
+	
+If the unique and the key match up, it'll return true. Otherwise, it'll be false. Easy, right?
 
 ## Contributing to cipher
  
