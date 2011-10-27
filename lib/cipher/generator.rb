@@ -7,11 +7,11 @@ class Cipher
       i = 0
       
       while i < (@key_length/@section_length).ceil do
-        output << hash(unique + i.to_s)[1..@section_length] + @seperator
+        output << hash(unique + i.to_s)[0..@section_length-1] + @seperator
         i += 1
       end
       
-      @upcase == true ? output[0..-@seperator.length-1].upcase : output[0..-@seperator.length-1]
+      output[0..-@seperator.length-1].upcase
     end
     
     def hash(string)

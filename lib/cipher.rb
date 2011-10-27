@@ -1,10 +1,9 @@
 require 'cipher/generator'
 require 'cipher/validator'
-require 'cipher/exceptions'
 require 'cipher/version'
 
 class Cipher
-  attr_accessor :key_length, :section_length, :seperator, :hasher, :upcase
+  attr_accessor :key_length, :section_length, :seperator, :hasher
   
   include Generator
   include Validator
@@ -15,6 +14,5 @@ class Cipher
     @section_length = args[:section_length] || 4
     @seperator = args[:seperator] || '-'
     @hasher = args[:hasher] || 'sha1'
-    @upcase = args[:upcase] || true
   end
 end
