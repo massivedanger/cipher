@@ -15,7 +15,7 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "cipher"
-  gem.homepage = "http://github.com/evanwalsh/cipher"
+  gem.homepage = "http://github.com/massivedanger/cipher"
   gem.license = "MIT"
   gem.summary = %Q{Generate and validate license keys}
   gem.description = %Q{Generate and validate license keys}
