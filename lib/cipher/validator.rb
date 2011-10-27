@@ -1,7 +1,7 @@
 class Cipher
   module Validator
-    def validate(key)
-      generate == key
+    def validate(args = {})
+      generate(args[:unique]) == args[:key]
     end
   end
 end
