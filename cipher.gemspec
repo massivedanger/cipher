@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "cipher"
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Evan Walsh"]
@@ -33,7 +33,7 @@ Gem::Specification.new do |s|
     "test/helper.rb",
     "test/test_cipher.rb"
   ]
-  s.homepage = "http://github.com/evanwalsh/cipher"
+  s.homepage = "http://github.com/massivedanger/cipher"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.10"
