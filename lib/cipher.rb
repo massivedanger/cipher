@@ -4,7 +4,7 @@ require 'cipher/exceptions'
 require 'cipher/version'
 
 class Cipher
-  attr_accessor :key_length, :section_length, :seperator, :hasher
+  attr_accessor :key_length, :section_length, :seperator, :hasher, :upcase
   
   include Generator
   include Validator
@@ -12,9 +12,10 @@ class Cipher
   include Version
   
   def initialize(args = {})
-    @key_length = args[:key_length].to_f.ceil || 16
-    @section_length = args[:section_length].to_f.ceil || 4
-    @seperator = args[:seperator].to_s || '-'
+    @key_length = args[:key_length] || 16
+    @section_length = args[:section_length] || 4
+    @seperator = args[:seperator] || '-'
     @hasher = args[:hasher] || 'sha1'
+    @upcase = args[:upcase] || true
   end
 end

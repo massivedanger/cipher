@@ -1,13 +1,18 @@
 class Cipher
+  
   module Generator
-    def generate
-      
-    end
     
-    def random
-      (0...8).map{65.+(rand(25)).chr}.join
+    def generate(unique)
+      output = ''
+      i = 0
+      
+      while i < (@key_length/@section_length).ceil do
+        output << hash(unique + i.to_s)[1..@section_length] + @seperator
+        i += 1
+      end
+      
+      @upcase == true ? output[0..-@seperator.length-1].upcase : output[0..-@seperator.length-1]
     end
-    private :random
     
     def hash(string)
       case @hasher
@@ -23,5 +28,7 @@ class Cipher
       end
     end
     private :hash
+    
   end
+  
 end
