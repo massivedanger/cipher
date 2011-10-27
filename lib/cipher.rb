@@ -8,7 +8,6 @@ class Cipher
   
   include Generator
   include Validator
-  include Exceptions
   include Version
   
   def initialize(args = {})
