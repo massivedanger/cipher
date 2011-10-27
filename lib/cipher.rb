@@ -1,17 +1,21 @@
-class Cipher
-  def initialize(*args)
-    
-  end
-  
-  def self.generate
-    Cipher::Generator.new
-  end
-
-  def self.validate
-    Cipher::Validator.new
-  end
-end
-
 require 'cipher/generator'
 require 'cipher/validator'
 require 'cipher/version'
+
+class Cipher
+  include Generator
+  include Validator
+  include Version
+  
+  def initialize(args = {})
+    
+  end
+  
+  def generate
+    
+  end
+  
+  def validate
+    
+  end
+end

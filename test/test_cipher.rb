@@ -1,7 +1,15 @@
 require 'helper'
 
 class TestCipher < Test::Unit::TestCase
-  should 'return a version' do
-    assert_instance_of String, Cipher::VERSION
+  def setup
+    @cipher = Cipher.new
+  end
+  
+  should 'generate a key' do
+    assert_instance_of String, @cipher.generate
+  end
+  
+  should 'validate a key' do
+    assert @cipher.validate(@cipher.generate)
   end
 end

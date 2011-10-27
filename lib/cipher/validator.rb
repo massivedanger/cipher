@@ -1,3 +1,3 @@
-class Cipher::Validator
+module Validator
   
 end
