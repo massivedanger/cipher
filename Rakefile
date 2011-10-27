@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "cipher"
   gem.homepage = "http://github.com/evanwalsh/cipher"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Generate and validate license keys}
+  gem.description = %Q{Generate and validate license keys}
   gem.email = "evan@massivedanger.com"
   gem.authors = ["Evan Walsh"]
   # dependencies defined in Gemfile
