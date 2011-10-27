@@ -1,4 +1,15 @@
-class Cipher  
+class Cipher
+  def initialize(*args)
+    
+  end
+  
+  def self.generate
+    Cipher::Generator.new
+  end
+
+  def self.validate
+    Cipher::Validator.new
+  end
 end
 
 require 'cipher/generator'
