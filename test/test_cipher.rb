@@ -1,7 +1,7 @@
 require 'helper'
 
 class TestCipher < Test::Unit::TestCase
-  should "probably rename this file and start testing for real" do
-    flunk "hey buddy, you should probably rename this file and start testing for real"
+  should 'return a version' do
+    assert_instance_of String, Cipher::VERSION
   end
 end
