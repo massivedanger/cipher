@@ -1,1 +1,3 @@
 #!/usr/bin/ruby
+
+puts "Cipher: the executable. Coming soon to a terminal near you."

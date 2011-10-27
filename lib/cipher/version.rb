@@ -1,10 +1,5 @@
 class Cipher
   module Version
-    VERSION = '0.0.0'
-    BUILD = ''
-
-    def version
-      VERSION+BUILD
-    end
+    VERSION = '0.1.0'
   end
 end
